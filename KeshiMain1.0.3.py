@@ -46,7 +46,7 @@ async def on_message(message):
         'https://i.kym-cdn.com/photos/images/facebook/001/962/013/f20.jpg'
         ]
         embed = discord.Embed(title='Daily Genshit Memes', description='Provided by Lort Zhonglai')
-        embed.set_image(random.choice(randmeme))
+        embed.set_image(url=random.choice(randmeme))
 
         await message.channel.send(embed=embed)
 
