@@ -30,6 +30,25 @@ async def on_message(message):
         if (message.author.bot): return;
         await message.channel.send(embed=embed )
 
+    if 'zhongli' or 'Zhongli' in message.content:
+        if (message.author.bot):return;
+        randmeme = ['https://i.ytimg.com/vi/PLPWejjqgkw/maxresdefault.jpg', 
+        'https://pbs.twimg.com/media/Eww5NrxUYAE_OI_?format=jpg&name=small',
+        'https://i.pinimg.com/originals/af/62/d8/af62d8dce7a654b07300981b54b14da5.jpg',
+        'https://pbs.twimg.com/media/EmRZebaVcAUMnWl.jpg',
+        'https://c.tenor.com/7atP9_EPnfcAAAAd/zhongli-meme.gif',
+        'https://static.wikia.nocookie.net/83380ffb-3797-4ae8-9413-6430d1f18c8e/scale-to-width/755',
+        'https://data.whicdn.com/images/354588201/original.jpg',
+        'https://i.kym-cdn.com/photos/images/facebook/001/925/503/5c2.jpg',
+        'https://pbs.twimg.com/media/EmRZeriVkAEpedS.jpg',
+        'https://img-9gag-fun.9cache.com/photo/a0Z9WAd_460s.jpg',
+        'https://gamedaim.com/wp-content/uploads/2021/04/19-800x1067.jpeg',
+        'https://i.kym-cdn.com/photos/images/facebook/001/962/013/f20.jpg'
+        ]
+        embed = discord.Embed(title='Daily Genshit Memes', description='Provided by Lort Zhonglai')
+        embed.set_image(random.choice(randmeme))
+
+        await ctx.send(embed=embed)
 
     if 'pagi keshi' in message.content:
         if (message.author.bot): return;
@@ -123,12 +142,17 @@ async def kick (ctx, member: discord.Member=None):
         return
 
     variable=[
-        'https://media1.tenor.com/images/dddc6e263456df2af41a93e123a7622a/tenor.gif',
-        'https://i.gifer.com/QVlJ.gif',
-        'https://media.tenor.com/images/22bfaf74d8f0a76ea0c63a383e483fc4/tenor.gif',
-        'https://i.gifer.com/ACKR.gif',
-        'https://media1.tenor.com/images/d4bd24c980e46c66f67077aff59f0565/tenor.gif',
-        'https://i.makeagif.com/media/12-08-2015/1WELz7.gif',
+        "https://c.tenor.com/HLx4m-urlBEAAAAC/kick-anime.gif",
+        "https://c.tenor.com/WXJF2QatHA4AAAAM/anime-ouch.gif",
+        "https://i.pinimg.com/originals/44/6f/49/446f49e675e38e1bb10d226f12519092.gif",
+        "https://c.tenor.com/KxmgDMI7B04AAAAC/anime-kick.gif",
+        "https://c.tenor.com/RpoULE5sV7IAAAAd/kick-fight.gif",
+        "https://c.tenor.com/HLjrGeO-wFkAAAAM/kick-get.gif",
+        "https://media.giphy.com/media/wOly8pa4s4W88/giphy.gif",
+        "https://c.tenor.com/f1mFGp6vujkAAAAd/charlotte-window-kick-anime-kick.gif",
+        "https://c.tenor.com/aDZHwZaw9t4AAAAC/anime-kick.gif",
+        "https://c.tenor.com/2l13s2uQ6GkAAAAM/kick.gif",
+        "https://i.pinimg.com/originals/b1/f7/4e/b1f74ea1c8c07a930c90e0f7f74d2165.gif"
         ]
     embed = discord.Embed(description=f'{ctx.message.author.mention} menendang {member.mention}')
     embed.set_image(url=random.choice(variable))
