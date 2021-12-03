@@ -48,7 +48,7 @@ async def on_message(message):
         embed = discord.Embed(title='Daily Genshit Memes', description='Provided by Lort Zhonglai')
         embed.set_image(random.choice(randmeme))
 
-        await ctx.send(embed=embed)
+        await message.channel.send(embed=embed)
 
     if 'pagi keshi' in message.content:
         if (message.author.bot): return;
