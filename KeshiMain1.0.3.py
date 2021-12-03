@@ -30,26 +30,6 @@ async def on_message(message):
         if (message.author.bot): return;
         await message.channel.send(embed=embed )
 
-    if 'zhongli' or 'Zhongli' in message.content:
-        if (message.author.bot):return;
-        randmeme = ['https://i.ytimg.com/vi/PLPWejjqgkw/maxresdefault.jpg', 
-        'https://pbs.twimg.com/media/Eww5NrxUYAE_OI_?format=jpg&name=small',
-        'https://i.pinimg.com/originals/af/62/d8/af62d8dce7a654b07300981b54b14da5.jpg',
-        'https://pbs.twimg.com/media/EmRZebaVcAUMnWl.jpg',
-        'https://c.tenor.com/7atP9_EPnfcAAAAd/zhongli-meme.gif',
-        'https://static.wikia.nocookie.net/83380ffb-3797-4ae8-9413-6430d1f18c8e/scale-to-width/755',
-        'https://data.whicdn.com/images/354588201/original.jpg',
-        'https://i.kym-cdn.com/photos/images/facebook/001/925/503/5c2.jpg',
-        'https://pbs.twimg.com/media/EmRZeriVkAEpedS.jpg',
-        'https://img-9gag-fun.9cache.com/photo/a0Z9WAd_460s.jpg',
-        'https://gamedaim.com/wp-content/uploads/2021/04/19-800x1067.jpeg',
-        'https://i.kym-cdn.com/photos/images/facebook/001/962/013/f20.jpg'
-        ]
-        embed = discord.Embed(title='Daily Genshit Memes', description='Provided by Lort Zhonglai')
-        embed.set_image(url=random.choice(randmeme))
-
-        await message.channel.send(embed=embed)
-
     if 'pagi keshi' in message.content:
         if (message.author.bot): return;
         await message.channel.send(f'Pagi Nyaa {message.author.mention}')
@@ -380,6 +360,25 @@ async def avatar(ctx,member : discord.Member=None):
     embed.add_field(name=f"Hippity Hoppity your Profile Picture is now my property!", value=f"{member.mention}'s Profile Picture")
     embed.set_image(url=member.avatar_url)
 
+    await ctx.send(embed=embed)
+
+@keshi.command()
+async def genshit(ctx):  
+    randmeme = ['https://i.ytimg.com/vi/PLPWejjqgkw/maxresdefault.jpg', 
+    'https://pbs.twimg.com/media/Eww5NrxUYAE_OI_?format=jpg&name=small',
+    'https://i.pinimg.com/originals/af/62/d8/af62d8dce7a654b07300981b54b14da5.jpg',
+    'https://pbs.twimg.com/media/EmRZebaVcAUMnWl.jpg',
+    'https://c.tenor.com/7atP9_EPnfcAAAAd/zhongli-meme.gif',
+    'https://static.wikia.nocookie.net/83380ffb-3797-4ae8-9413-6430d1f18c8e/scale-to-width/755',
+    'https://data.whicdn.com/images/354588201/original.jpg',
+    'https://i.kym-cdn.com/photos/images/facebook/001/925/503/5c2.jpg',
+    'https://pbs.twimg.com/media/EmRZeriVkAEpedS.jpg',
+    'https://img-9gag-fun.9cache.com/photo/a0Z9WAd_460s.jpg',
+    'https://gamedaim.com/wp-content/uploads/2021/04/19-800x1067.jpeg',
+    'https://i.kym-cdn.com/photos/images/facebook/001/962/013/f20.jpg'
+    ]
+    embed = discord.Embed(title='Daily Genshit Memes', description='Provided by Lort Zhonglai')
+    embed.set_image(url=random.choice(randmeme))
     await ctx.send(embed=embed)
 
 
