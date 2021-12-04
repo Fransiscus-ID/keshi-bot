@@ -382,5 +382,11 @@ async def genshit(ctx):
     await ctx.send(embed=embed)
 
 
+@keshi.command()
+async def faq(ctx):
+    embed = discord.Embed(title="FAQ's about Keshi's Bot development!", description='Powered by Heroku, and Google Docs')
+    embed.add_field(name="Google Docs Link:", value='https://docs.google.com/document/d/1pAPh25LykoYweIbSThQKXs_HJn5aZ8085WtHaI3Acvw/edit?usp=sharing')
+    await ctx.send(embed=embed)
+
 
 keshi.run('ODAxOTc5ODIxMjAxNTU1NDY4.YAoj6Q.kFQu8YOEL01NlhgcwGFg-u4FtEc')
